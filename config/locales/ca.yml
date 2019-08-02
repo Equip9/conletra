@@ -1,3 +1,7 @@
 ca:
-  wip: "conletra.com català"
+  wip: "WIP WIP"
   About: Sobre mi
+  locales:
+    en: English
+    ca: Català
+  Locale: Idioma

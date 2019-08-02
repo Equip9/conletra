@@ -10,9 +10,26 @@
   </head>
 
   <body>
-    <%= localization_menu %>
-    <%= link_to t("Home"), root_path %>
-    <%= link_to t("About"), about_path %>
-    <%= yield %>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <%= link_to t("Home"), root_path, class: "navbar-item" %>
+        <%= link_to t("About"), about_path, class: "navbar-item" %>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <%= link_to t("Locale"), "#", class: "navbar-link" %>
+          <div class="navbar-dropdown">
+            <%= localization_menu %>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="hero is-medium">
+      <div class="hero-body">
+        <div class="container">
+          <%= yield %>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
