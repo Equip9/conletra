@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
+  helper :localization
+
   def index
-    render plain: "conletra.com"
+  end
+
+  def about
   end
 end

@@ -10,6 +10,9 @@
   </head>
 
   <body>
+    <%= localization_menu %>
+    <%= link_to t("Home"), root_path %>
+    <%= link_to t("About"), about_path %>
     <%= yield %>
   </body>
 </html>
