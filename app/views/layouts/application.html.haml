@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title= head_title
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %nav.navbar{role: "navigation", aria_label: "main navigation" }
+      .navbar-brand
+        = link_to t("Home"), root_path, class: "navbar-item"
+        = link_to t("About"), about_path, class: "navbar-item"
+      .navbar-end
+        .navbar-item.has-dropdown.is-hoverable
+          = link_to t("Locale"), "#", class: "navbar-link"
+          .navbar-dropdown= localization_menu
+    %section.hero.is-medium
+      .hero-body
+        .container
+          = yield

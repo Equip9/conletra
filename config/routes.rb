@@ -5,4 +5,6 @@ Rails.application.routes.draw do
     get "/about", to: "home#about"
     root to: "home#index"
   end
+
+  root to: "home#index", locale: I18n.default_locale
 end
